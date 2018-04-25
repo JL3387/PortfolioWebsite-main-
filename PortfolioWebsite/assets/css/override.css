@@ -1,0 +1,28 @@
+﻿#hero h1, #hero h5{
+    color: white;
+}
+
+#works-grid {
+    padding-top: 85px;
+}
+
+#pickFiveResults h5,
+#pickFiveResults p,
+#factorialResults h5,
+#factorialResults p {
+    display: inline;
+}
+
+.redError h6,
+.redError p{
+    color: red;
+}
+
+.works-hover-w .work-title {
+    color: #fff;
+}
+
+.works-hover-w .work-descr {
+    color: #fff;
+}
+

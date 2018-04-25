@@ -1,0 +1,546 @@
+﻿<!-- NAVIGATION -->
+<nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
+
+    <div class="container">
+
+        <div class="navbar-header">
+            <!-- YOU LOGO HERE -->
+            <a class="navbar-brand" href="index.html">
+                <!-- IMAGE OR SIMPLE TEXT -->
+                @*<img src="~/assets/images/logo-dark.png" width="95" alt="">*@
+            </a>
+        </div>
+
+        <!-- ICONS NAVBAR -->
+        @*<ul id="icons-navbar" class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </li>
+            </ul>*@
+        <!-- /ICONS NAVBAR -->
+
+        <ul class="extra-navbar nav navbar-nav navbar-right">
+            <li><a href="#hero" title="Home">Home</a></li>
+            <li><a href="#works-grid" title="Portfolio">Portfolio</a></li>
+            <li><a href=@Url.Action("About", "Home") title="About">About</a></li>
+            <li><a href=@Url.Action("Contact", "Home") title="Contact">Contact</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+<!-- /NAVIGATION -->
+<!-- HERO -->
+<section id="hero" class="module-hero module-parallax module-full-height bg-light-30" data-background="../../assets/images/section-15.jpg">
+
+    <!-- HERO TEXT -->
+    <div class="hero-caption">
+        <div class="hero-text">
+
+            <h1 class="mh-line-size-1 font-alt m-b-50">John Mathis</h1>
+            <h5 class="mh-line-size-4 font-alt"></h5>
+
+        </div>
+    </div>
+    <!-- /HERO TEXT -->
+
+</section>
+<!-- /HERO -->
+<!-- PORTFOLIO -->
+<section id="portfolio" class="module">
+
+    <div class="container">
+
+        <!-- FILTER -->
+        @*<div class="row">
+
+                <div class="col-sm-12">
+                    <ul id="filters" class="filters font-alt">
+                        <li><a href="#" data-filter="*" class="current">All <sup><small>.355</small></sup></a></li>
+                        <li><a href="#" data-filter=".branding">Branding <sup><small>.78</small></sup></a></li>
+                        <li><a href="#" data-filter=".design">Design <sup><small>.123</small></sup></a></li>
+                        <li><a href="#" data-filter=".photo">Photo <sup><small>.144</small></sup></a></li>
+                        <li><a href="#" data-filter=".web">Web <sup><small>.140</small></sup></a></li>
+                    </ul>
+                </div>
+
+            </div>*@
+        <!-- /FILTER -->
+        <!-- WORKS GRID -->
+        <div class="row">
+
+            <div id="works-grid" class="works-grid works-hover-w">
+
+                <!-- DO NOT DELETE THIS DIV -->
+                <div class="grid-sizer"></div>
+
+                <!-- PORTFOLIO ITEM -->
+                @*<div class="work-item tall branding">
+                        <a href="" title="" data-toggle="modal" data-target="">
+                            <img src="~/assets/images/portfolio/img-1.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">The European languages</h3>
+                                <div class="work-descr">
+                                    Branding
+                                </div>
+                            </div>
+                        </a>
+                    </div>*@
+                <!-- /PORTFOLIO ITEM -->
+                <!-- PORTFOLIO ITEM Javascript/Jquery Coding Exercises-->
+                <div class="work-item design">
+                    <a href="" title="Coding Exercises" data-toggle="modal" data-target="#ExerciseModal">
+                        <img src="~/assets/images/portfolio/img-3.jpg" alt="">
+                        <div class="work-caption font-alt">
+                            <h3 class="work-title">Coding Exercise</h3>
+                            <div class="work-descr">
+                                JavaScript/Jquery
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- Let's start fresh with code from w3schools and then compare... -->
+                <!-- Modal -->
+                <div id="ExerciseModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title text-center">Coding Exercises</h4>
+                            </div>
+                            <div class="modal-body">
+                                <!--modal nav-->
+                                <ul class="nav nav-pills">
+                                    <li class="active col-md-2"><a data-toggle="pill" href="#pickFive">Pick Five</a></li>
+                                    <li class="col-md-2"><a data-toggle="pill" href="#factorialNum">Factorial</a></li>
+                                    <li class="col-md-2"><a data-toggle="pill" href="#fizzBuzz">Fizz Buzz</a></li>
+                                    <li class="col-md-2"><a data-toggle="pill" href="#palindrome">Palindrome</a></li>
+                                    <li class="col-md-2"><a data-toggle="pill" href="#permutation">Permutation</a></li>
+                                    <li class="col-md-2"><a data-toggle="pill" href="#alphaOrder">Alphabetical Order</a></li>
+                                    <li class="col-md-2"><a data-toggle="pill" href="#titleCase">Title Case</a></li>
+                                </ul>
+                                <div class="tab-content">
+
+                                    <!--pick 5-->
+                                    <div id="pickFive" class="tab-pane fade in active row">
+                                        <p class="col-md-8">Enter at least five numbers seperated by a space, this will calculate the smallest number, largest number, mean of the numbers, sum of the numbers and the product of the numbers. </p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="fiveInput">Enter at least 5 numbers seperated by a space.</label> <br />
+                                            <input id="fiveInput" class="custom" size="32" />
+                                            <p id="pickFiveError" class="redError"></p>
+                                            <div id="pickFiveResults"></div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="fiveNumButton" type="button">Calculate Results</button>
+                                            <button id="fiveNumShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="fiveNumCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                    $('#fiveNumButton').click(function () {
+                                                        $('#pickFiveError').html('');
+   
+                                                        let stringArray = $('#fiveInput').val().split(' ');
+
+                                                        let numArray = stringArray.map(function(x) {
+                                                            return parseInt(x, 10);
+                                                        });
+
+                                                        let cleanArray = numArray.filter(function (val) {
+                                                            return val || val === 0;
+                                                        });
+
+                                                        if (alphaPattern.test($('#fiveInput').val())) {
+                                                            $('#pickFiveError').html("<h6>" + "Looks like you put in something other than numbers." + "</h6>");
+                                                        } 
+                                                        else if (cleanArray.length < 5) {
+                                                                $('#pickFiveError').html("<h6>" + "I don't think you entered at least 5 numbers." + "</h6>");
+                                                        } else {
+                                                                let sum = 0;
+                                                                let product = 1;
+
+                                                                cleanArray.forEach(function (val) {
+                                                                sum += val;
+                                                                product *= val;
+                                                                });
+
+                                                                $('#pickFiveResults').html(
+                                                                "<h5>Smallest Number:</h5>" + "<p>" + Math.min(...cleanArray) + "</p>" + "<br>" +
+                                                                "<h5>Largest Number: </h5>" + "<p>" + Math.max(...cleanArray) + "</p>" + "<br>" +
+                                                                "<h5>Mean: </h5>" + "<p>" + (sum / cleanArray.length).toFixed(2) + "</p>" + "<br>" +
+                                                                "<p><h5>Sum: </h5>" + "<p>" + sum + "</p>" + "<br>" +
+                                                                "<p><h5>Product: </h5>" + "<p>" + product + "</p>"
+                                                                );
+                                                        }
+                                                    });
+                    
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+
+                                    <!--factorial-->
+                                    <div id="factorialNum" class="tab-pane fade row">
+                                        <p class="col-md-8">Enter a number to get the facortial, factorial is a non-negative integer n is the product of all positive integers less than or equal to n. (i.e. 5!=5 * 4 * 3 * 2 * 1 = 120).</p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="factorialInput">Enter a number to get the factorial.</label> <br />
+                                            <input id="factorialInput" class="custom" size="32" />
+                                            <p id="factorialError" class="redError"></p>
+                                            <div id="factorialResults"></div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="factorialButton" type="button">Calculate Factorial</button>
+                                            <button id="factorialShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="factorialCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                    $('#factorialButton').click(function () {
+                                                        $('#factorialError').html('');
+                                                        let stringArray = $('#factorialInput').val().split(' ');
+                                                        let numArray = stringArray.map(function (x) {
+                                                            return parseInt(x, 10);
+                                                        });
+                                                        let cleanArray = numArray.filter(function (val) {
+                                                            return val || val === 0;
+                                                        });
+
+                                                        if ((cleanArray[0]) === 0) {
+                                                            $('#factorialResults').html(
+                                                                "<h5>The factorial of " + cleanArray[0] + " :</h5>" + "<p>0</p>"
+                                                            );
+                                                        }
+                                                        else if (alphaPattern.test($('#factorialInput').val())) {
+                                                            $('#factorialError').html("<h6>" + "Looks like you put in something other than numbers." + "</h6>");
+                                                        } 
+                                                        else if (cleanArray.length > 1 || cleanArray.length < 1 || cleanArray[0] < 0) {
+                                                                $('#factorialError').html("<h6>" + "You didn't enter a single positive integer." + "</h6>");
+                                                        } else {
+
+                                                            function factorial(num) {
+                                                                let factorial = 1;
+                                                                while (num > 1) {
+                                                                    factorial *= num;
+                                                                    num--;
+                                                                }
+                                                                return factorial;
+                                                            }
+
+                                                            if ( factorial(cleanArray[0]) == "Infinity") {
+                                                                $('#factorialResults').html(
+                                                                    "<h5>The factorial of " + cleanArray[0] +  "<h5>" + "<p> is to large for me to calculate.</p>"
+                                                                );
+                                                            } else {
+                                                                $('#factorialResults').html(
+                                                                    "<h5>The factorial of " + cleanArray[0] + " : </h5>" + "<p>" + factorial((cleanArray[0])) + "</p>"
+                                                                );
+                                                            }
+                                                        }
+                                                    });
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+
+                                    <!--fizzbuzz-->
+                                    <div id="fizzBuzz" class="tab-pane fade row">
+                                        <p class="col-md-8">Fizz Buzz iterates through all numbers from 1 to 100, for each number that is a multiple of the first number input print "Fizz" instead of the number. For each number that is a multiple of the second number print "Buzz", multiples of both numbers print "FizzBuzz".</p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="fizzBuzzInput"><strong>Enter 2 numbers from 1 - 100, seperated by a space for the Fizz Buzz challenge. </strong></label><br>
+                                            <input name="fizzBuzzInput" id="fizzBuzzInput" type="text" size="30" /><br>
+                                            <p id="fizzBuzzError" class="redError"></p>
+                                            <div id="fizzBuzzResults"></div>
+                                            @*<textarea id="fizzBuzzResults" rows="6" cols="30" style="display:none"></textarea>*@
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="fizzBuzzButton" type="button">Get Fizz Buzz</button>
+                                            <button id="fizzbuzzShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="fizzbuzzCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                        $('#fizzBuzzButton').click(function () {
+                                                            $('#fizzBuzzError').html('');
+                                                            let stringArray = $('#fizzBuzzInput').val().split(' ');
+                                                            $("#fizzBuzzResults").val('');
+                                                            let numArray = stringArray.map(function (x) {
+                                                                return parseInt(x, 10);
+                                                            });
+
+                                                            let cleanArray = numArray.filter(function (val) {
+                                                                return val || val === 0;
+                                                            });
+
+                                                            if (alphaPattern.test($('#fizzBuzzInput').val())) {
+                                                                $('#fizzBuzzError').html("<h6>" + "Looks like you put in something other than numbers." + "</h6>");
+                                                            }
+                                                            else if (cleanArray.length != 2 || cleanArray[0] <= 1  || cleanArray[0] >= 100 || cleanArray[1] <= 1 || cleanArray[1] >= 100 ) {
+                                                                $('#fizzBuzzError').html("<h6>" + "You didn't input 2 positive integers bewtween 1 - 100." + "</h6>");
+                                                            }else {
+                                                                for (let i = 1; i <= 100; i++) {
+                                                                    if (i % cleanArray[0] == 0 && i % cleanArray[1] == 0) {
+                                                                        result += '<p style="margin-bottom:0px">fizzbuzz</p>';
+                                                                    } else if (i % cleanArray[0] == 0) {
+                                                                        result += '<p style="margin-bottom:0px">fizz</p>';
+                                                                    } else if (i % cleanArray[1] == 0) {
+                                                                        result += '<p style="margin-bottom:0px">buzz</p>';
+                                                                    } else {
+                                                                        result += '<p style="margin-bottom:0px">' + i + '</p>';
+                                                                    }
+                                                                }
+                                                                $("#fizzBuzzResults").html("<div style='overflow:scroll;height:100px; width: 241.33px'>" + result +"</div>");
+                                                            }
+                                                        });
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+
+                                    <!--Palindrome-->
+                                    <div id="palindrome" class="tab-pane fade row">
+                                        <p class="col-sm-8 containment">Is your word a palindrome (the same backwards as it is forward).</p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="palindromeInput">See if your word is a palindrome</label><br>
+                                            <input id="palindromeInput" name="palindromeInput" type="text" size="30" /><br>
+                                            <p id="palindromeError" class="redError"></p>
+                                            <div id="palindromeResults"></div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="palindromeButton" type="button">Palindrome Check</button>
+                                            <button id="palindromeShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="palindromeCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                        $('#palindromeButton').click(function () {
+                                                            $("#palindromeError").html('');
+                                                            if (numPattern.test($('#palindromeInput').val())) {
+                                                                $('#palindromeError').html("<h6>" + "Enter only a word." + "</h6>");
+                                                            } else {
+                                                                let reverseWord = ($('#palindromeInput').val().split('').reverse().join('')).toLowerCase();
+                                                                if (reverseWord === $('#palindromeInput').val().toLowerCase()) {
+                                                                    $('#palindromeResults').html("<h5>" + ($('#palindromeInput').val()) + ": is a palindrome.</h5>")
+                                                                } else {
+                                                                    $('#palindromeResults').html("<h5>" + ($('#palindromeInput').val()) + ": isn't a palindrome.</h5>")
+                                                                }
+                                                            }
+                                                        });
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+
+                                    <!--Permutation-->
+                                    <div id="permutation" class="tab-pane fade row">
+                                        <p class="col-sm-8 containment">Get the permutation of a word.</p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="permutationInput">Enter a word</label><br>
+                                            <input id="permutationInput" name="permutationInput" type="text" size="30" /><br>
+                                            <p id="permutationError" class="redError"></p>
+                                            <div id="permutationResults"></div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="permutationButton" type="button">Get Permutations</button>
+                                            <button id="permutationShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="permutationCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                        $('#permutationButton').click(function () {
+                                                            let permutation = ""; 
+                                                            let word = $('#permutationInput').val();
+                                                            for (let i = 0; i < word.length; i++) {
+                                                                for (let j = i + 1; j < word.length + 1; j++) {
+                                                                    permutation +=  word.substring(i, j) + ", " ;
+                                                                }
+                                                            }
+                                                            $('#permutationResults').html("The Permutations for " + word + ":" + "<h5>" + permutation + "</h5>");
+                                                        });
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+
+                                    <!--Alphabetized Word-->
+                                    <div id="alphaOrder" class="tab-pane fade row">
+                                        <p class="col-sm-8 containment">Alphabetize your word.</p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="alphaInput">Enter a word</label><br>
+                                            <input id="alphaInput" name="alphaInput" type="text" size="30" /><br>
+                                            <p id="alphaError" class="redError"></p>
+                                            <div id="alphaResults"></div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="alphaButton" type="button">Alphabetize Word</button>
+                                            <button id="alphaShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="alphaCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                         $('#alphaButton').click(function () {
+                                                            let word = $('#alphaInput');
+                                                            let wordArray = word.split("");
+                                                            let sortedWord = wordArray.sort().join("");
+                                                            $('#alphaResults').html("<h5>" + sortedWord + "</h5>");
+                                                        });
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+
+                                    <!--Title Case-->
+                                    <div id="titleCase" class="tab-pane fade row">
+                                        <p class="col-sm-8 containment">Enter a string to get the every letter of the first word capitalized.</p>
+                                        <div class="col-sm-12 containment">
+                                            <label for="titleCaseInput">Enter a string</label><br>
+                                            <input id="titleCaseInput" name="titleCaseInput" type="text" size="30" /><br>
+                                            <p id="titleCaseError" class="redError"></p>
+                                            <div id="titleCaseResults"></div>
+                                        </div>
+                                        <div class="col-sm-12">
+                                            <button id="titleCaseButton" type="button">Get Title Case</button>
+                                            <button id="titleCaseShowCode" type="button">Show Code</button>
+                                        </div>
+                                        @*Code insert*@
+                                        <div id="titleCaseCode" class="col-sm-12" style="display: none;">
+                                            <pre class="brush: js">
+                                                        $('#alphaButton').click(function () {
+                                                            let stringarray = firstUpperInput.val().split(" ");
+                                                            for (let i = 0; i < stringarray.length; i++) {
+                                                                stringarray[i] = stringarray[i].charAt(0).toUpperCase() + stringarray[i].substr(1);
+                                                            }
+                                                            $('firstUpperResults').html(stringarray.join(" "));
+                                                        });
+                                                    </pre>
+                                        </div>
+                                        @*//Code insert*@
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- PORTFOLIO ITEM -->
+                <div class="work-item design">
+                    <a href="https://jmblog87.azurewebsites.net" title="" data-toggle="modal" data-target="">
+                        <img src="~/assets/images/portfolio/img-2.jpg" alt="">
+                        <div class="work-caption font-alt">
+                            <h3 class="work-title">Blog Site</h3>
+                            @*<div class="work-descr">
+                                Coming Soon
+                            </div>*@
+                        </div>
+                    </a>
+                </div>
+                <!-- /PORTFOLIO ITEM -->
+                <!-- PORTFOLIO ITEM -->
+                <div class="work-item design">
+                    <a href="https://jmbugtracker.azurewebsites.net" title="" data-toggle="modal" data-target="">
+                        <img src="~/assets/images/portfolio/img-4.jpg" alt="">
+                        <div class="work-caption font-alt">
+                            <h3 class="work-title">Bug Tracker</h3>
+                            @*<div class="work-descr">
+                                Coming Soon
+                            </div>*@
+                        </div>
+                    </a>
+                </div>
+                <!-- /PORTFOLIO ITEM -->
+                <!-- /PORTFOLIO ITEM -->
+                <div class="work-item design">
+                    <a href="" title="" data-toggle="modal" data-target="">
+                        <img src="~/assets/images/portfolio/img-5.jpg" alt="">
+                        <div class="work-caption font-alt">
+                            <h3 class="work-title">Financial Portal</h3>
+                            <div class="work-descr">
+                                Coming Soon
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- /PORTFOLIO ITEM -->
+                <!-- PORTFOLIO ITEM -->
+                @*<div class="work-item wide-tall branding photo web">
+                        <a href="" title="" data-toggle="modal" data-target="">
+                            <img src="~/assets/images/portfolio/img-6.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">The grammar of the resulting language</h3>
+                                <div class="work-descr">
+                                    Branding / Photo / Web
+                                </div>
+                            </div>
+                        </a>
+                    </div>*@
+                <!-- /PORTFOLIO ITEM -->
+                <!-- PORTFOLIO ITEM -->
+                @*<div class="work-item wide design photo web">
+                        <a href="" title="" data-toggle="modal" data-target="">
+                            <img src="~/assets/images/portfolio/img-7.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">A collection of textile samples</h3>
+                                <div class="work-descr">
+                                    Design / Photo / Web
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /PORTFOLIO ITEM -->
+                    <!-- PORTFOLIO ITEM -->
+                    <div class="work-item branding photo">
+                        <a href="" title="" data-toggle="modal" data-target="">
+                            <img src="~/assets/images/portfolio/img-8.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">Gregor then turned</h3>
+                                <div class="work-descr">
+                                    Branding / Photo
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- /PORTFOLIO ITEM -->
+                    <!-- PORTFOLIO ITEM -->
+                    <div class="work-item branding photo">
+                        <a href="" title="" data-toggle="modal" data-target="">
+                            <img src="~/assets/images/portfolio/img-9.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">He must have tried it</h3>
+                                <div class="work-descr">
+                                    Branding / Photo
+                                </div>
+                            </div>
+                        </a>
+                    </div>*@
+                <!-- /PORTFOLIO ITEM -->
+                <!-- PORTFOLIO ITEM -->
+                @*<div class="work-item wide design web">
+                        <a href="" title="" data-toggle="modal" data-target="">
+                            <img src="~/assets/images/portfolio/img-10.jpg" alt="">
+                            <div class="work-caption font-alt">
+                                <h3 class="work-title">However hard he threw himself</h3>
+                                <div class="work-descr">
+                                    Design / Web
+                                </div>
+                            </div>
+                        </a>
+                    </div>*@
+                <!-- /PORTFOLIO ITEM -->
+
+            </div>
+
+        </div>
+        <!-- /WORKS GRID -->
+    </div>
+
+</section>
+<!-- /PORTFOLIO -->

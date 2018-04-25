@@ -1,0 +1,125 @@
+﻿<!-- NAVIGATION -->
+<nav class="navbar navbar-custom navbar-transparent navbar-fixed-top">
+
+    <div class="container">
+
+        <div class="navbar-header">
+            <!-- YOU LOGO HERE -->
+            <a class="navbar-brand" href="index.html">
+                <!-- IMAGE OR SIMPLE TEXT -->
+                @*<img src="~/assets/images/logo-dark.png" width="95" alt="">*@
+            </a>
+        </div>
+
+        <!-- ICONS NAVBAR -->
+        @*<ul id="icons-navbar" class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" id="toggle-menu" class="show-overlay" title="Menu">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                </li>
+            </ul>*@
+        <!-- /ICONS NAVBAR -->
+
+        <ul class="extra-navbar nav navbar-nav navbar-right">
+            <li><a href=@Url.Action("Index","Home") title="Home">Home</a></li>
+            <li><a href="@Url.Action("Index","Home")#works-grid" title="Portfolio">Portfolio</a></li>
+            <li><a href=@Url.Action("About", "Home") title="About">About</a></li>
+            <li><a href=@Url.Action("Contact", "Home") title="Contact">Contact</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+<!-- /NAVIGATION -->		
+
+<!-- HERO -->
+		<section class="module module-parallax bg-dark-90" data-background="~/assets/images/section-7.jpg">
+
+			<!-- HERO TEXT -->
+			<div class="container">
+
+				<div class="row">
+					<div class="col-sm-12 text-center">
+						<h1 class="mh-line-size-3 font-alt m-b-20">About Me</h1>
+						
+					</div>
+				</div>
+
+			</div>
+			<!-- /HERO TEXT -->
+
+		</section>
+		<!-- /HERO -->
+
+		<!-- ABOUT -->
+		<section class="module">
+
+			<div class="container">
+
+				<div class="row">
+
+					<!-- ABOUT STUDIO  -->
+					<div class="col-sm-4">
+                        <img src="~/img/John Lee Mathis_bw.jpg" />
+					</div>
+					<!-- /ABOUT STUDIO  -->
+
+					<!-- WHAT WE DO -->
+					<div class="col-sm-4">
+
+						<h4 class="font-alt m-t-0 m-b-20">About Me</h4>
+						<p>My Name is John Lee Mathis, most of my friends just call me John. I have been coding off and on for about a year where I first started teaching myself HTML and CSS, and dipped my toes in Sass. After a lot of research I came to the conclusion that Javascript would be my next Everest or atleast that is what it felt like at the time. After much deliberation the next leg of my journy in learning would land me at Coder Foundry where I was immersed in .Net, C#, Sql databases, when I'm not coding you can usually find me watching some classic movies pre late 80's horror and comedy.</p>
+
+					</div>
+					<!-- /WHAT WE DO -->
+
+					<!-- SKILLS -->
+                    <div class="col-sm-4">
+
+                        <h4 class="font-alt m-t-0 m-b-20">Skills</h4>
+
+                        <h6 class="progress-title font-alt">Microsoft .NET</h6>
+
+                        <h6 class="progress-title font-alt">C#</h6>
+
+                        <h6 class="progress-title font-alt">Sql</h6>
+
+                        <h6 class="progress-title font-alt">JavaScript</h6>
+
+                        <h6 class="progress-title font-alt">Xamarin</h6>
+
+                        <h6 class="progress-title font-alt">HTML 5 / CSS 3</h6>
+
+                        <h6 class="progress-title font-alt">Sass</h6>
+
+                    </div>
+					<!-- /SKILLS -->
+
+				</div>
+
+			</div>
+
+		</section >
+		<!-- /ABOUT -->
+
+		<!-- COUNTERS -->
+		<section class="module module-video bg-dark" data-background="~/assets/images/section-10.jpg">
+
+			<div class="container">
+
+				<div class="row">
+
+				</div>
+
+			</div>
+
+			<!-- YOUTUBE VIDEO-->
+			<div class="video-player" data-property="{videoURL:'https://www.youtube.com/watch?v=0pXYp72dwl0', containment:'.module-video', quality:'large', startAt:0, autoPlay:true, loop:true, opacity:1, showControls:false, showYTLogo:false, vol:0, mute:true}"></div>
+			<!-- /YOUTUBE VIDEO-->
+
+		</section>
+		<!-- /COUNTERS -->
+
