@@ -16,7 +16,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="~/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Plugins -->
     <link href="~/assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="~/assets/css/linea-icons.css" rel="stylesheet">
@@ -41,7 +41,6 @@
         <div class="loader">Loading...</div>
     </div>
     <!-- /PRELOADER -->
-
     <!-- OVERLAY MENU -->
     <div id="overlay-menu" class="overlay-menu">
 
@@ -127,47 +126,53 @@
 
     </div>
     <!-- /OVERLAY MENU -->
-
     <!-- WRAPPER -->
     <div class="wrapper">
         @*<div class="container body-content">*@
-            @RenderBody()
-            <hr />
-            <!-- FOOTER -->
-            <footer class="module bg-light">
+        @RenderBody()
+        <hr />
+        <!-- FOOTER -->
+        <footer class="module bg-light" style="padding: 75px 0;">
 
-                <div class="container">
+            <div class="container">
 
-                    <div class="row">
+                <div class="row">
 
-                        <div class="col-sm-12">
+                    <div class="col-sm-12">
 
-                            <ul class="social-text-links font-alt text-center m-b-20">
-                                @*<li><a href="#">Linkedin</a></li>*@
-                            </ul>
-
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-sm-12">
-
-                            <p class="copyright text-center m-b-0">© 2015 <a href="#">Vortex</a>, All Rights Reserved.</p>
-
-                        </div>
+                        <ul class="social-text-links font-alt text-center m-b-20">
+                            <li>
+                                <a href="https://www.linkedin.com/in/john-mathis-b6134b160/">
+                                    <img src="~/img/In-Black-66px-TM.png" />
+                                </a>
+                            <li>
+                                <a href="https://github.com/JL3387">
+                                    <img src="~/img/GitHub-Mark-64px.png" />
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
 
                     </div>
 
                 </div>
 
-            </footer>
-            <!-- /FOOTER -->
+                <div class="row">
+
+                    <div class="col-sm-12">
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+        <!-- /FOOTER -->
         @*</div>*@
     </div>
     <!-- /WRAPPER -->
-
     <!-- SCROLLTOP -->
     <div class="scroll-up">
         <a href="#totop"><i class="fa fa-angle-double-up"></i></a>
@@ -198,7 +203,7 @@
     <script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
     <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
     <script src="~/Scripts/javascript-jquery-exercises.js"></script>
-    
+
     <script type="text/javascript">SyntaxHighlighter.all()</script>
     @RenderSection("scripts", required: false)
 </body>

@@ -188,6 +188,9 @@
     <Content Include="assets\images\blog\blog-wide-2.jpg" />
     <Content Include="assets\images\blog\blog-wide-3.jpg" />
     <Content Include="assets\images\dot.gif" />
+    <Content Include="img\Blog.png" />
+    <Content Include="img\bug.png" />
+    <Content Include="img\DSC_0602.jpg" />
     <Content Include="assets\images\favicon.png" />
     <Content Include="assets\images\grabbing.png" />
     <Content Include="assets\images\hal9000-114-187546.png" />
@@ -314,7 +317,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="img\GitHub-Mark-64px.png" />
+    <Content Include="img\In-Black-66px-TM.png" />
     <Content Include="img\John Lee Mathis_bw.jpg" />
+    <Content Include="img\JS.jpg" />
     <Content Include="Scripts\javascript-jquery-exercises.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
